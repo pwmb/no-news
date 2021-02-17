@@ -1,3 +1,4 @@
+require("pug")
 const express = require("express")
 const { fetchNews } = require("./news")
 const PORT = process.env.PORT || 8080
@@ -12,7 +13,8 @@ app.get("/", async (req, res) => {
     const page = req.query.page || 1;
     const news = await fetchNews(page);
     const duration = Date.now() - startTime;
-    res.setHeader("duration", duration).render("index", { news, page, duration })
+    console.log(`Found ${news ? news.length : 0} news articles in ${duration}ms`);
+    res.render("index", { news, page, duration })
   } catch (error) {
     console.error(error)
     res.status(500).json({ ok: false, error: "Failed to get the news" })
