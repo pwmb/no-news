@@ -1,0 +1,17 @@
+{
+  "name": "no-news",
+  "version": "1.0.0",
+  "description": "Norway News API (for regjeringen.no) and a light weight UI",
+  "main": "index.js",
+  "repository": "git@github.com:pwmb/no-news.git",
+  "author": "Soumesh Banerjee <soumeshbanerjee@live.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.0",
+    "x-ray": "^2.3.4"
+  },
+  "scripts": {
+    "start": "node ."
+  }
+}

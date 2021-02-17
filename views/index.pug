@@ -1,0 +1,23 @@
+html
+  head
+    title= "No-News"
+    link(rel="stylesheet", href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css")
+  body
+    div(class="container mx-auto")
+      a(href="/")
+        h1(class="text-center text-xl py-4 bg-red-300 text-white font-bold uppercase")= "No-News"
+      div(class="px-12 pt-2 pb-8 bg-red-100")
+        div(class="text-xs font-thin italic mb-2")= "(Took " + parseInt(duration)/1000.00 + "s to get the news)"
+        ul(class="flex flex-col")
+          each v in news
+            li(class="pb-4")
+              a(href=v.link target="_blank")
+                div(class="text-lg font-medium")= v.title
+                div(class="text-sm font-light")
+                  span(class="pr-2")= v.date
+                  span(class="pr-2")= "|"
+                  span(class="pr-2")= v.type
+                  span(class="pr-2")= "|"
+                  span(class="")= v.dept
+        div
+          a(class="text-center font-bold" href="?page=" + (parseInt(page)+1))= "Next Page"
