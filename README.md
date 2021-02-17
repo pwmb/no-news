@@ -2,7 +2,7 @@
 
 Norway News API `un-official` (for regjeringen.no) and a light weight UI
 
-_(Please check out the [live demo](https://no-news.herokuapp.com))_
+_(Please check out the live demo [https://no-news.herokuapp.com](http://bit.ly/3s1xxv1))_
 
 ## Getting Started
 
